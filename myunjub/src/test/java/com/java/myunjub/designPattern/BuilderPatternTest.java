@@ -6,7 +6,7 @@ import com.java.myunjub.designPattern.Builder.BuilderVoDefaultValue;
 import org.junit.Test;
 
 
-public class BuilderTest {
+public class BuilderPatternTest {
 
   @Test
   public void legalBuilderTest() {
