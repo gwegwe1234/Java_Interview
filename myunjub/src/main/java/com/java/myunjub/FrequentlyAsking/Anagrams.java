@@ -37,11 +37,13 @@ public class Anagrams {
 
   public static void main(String args[]) {
     List<String> temp = new ArrayList();
+    temp.add("sunny");
+    temp.add("nnusy");
     temp.add("abcd");
     temp.add("bcda");
     temp.add("aaaa");
     Anagrams a = new Anagrams(temp);
-    System.out.println(a.getAnagrams("abcd"));
+    System.out.println(a.getAnagrams("bcda"));
     System.out.println("abcd");
   }
 }
