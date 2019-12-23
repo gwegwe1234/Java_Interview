@@ -1,22 +1,24 @@
 package com.java.myunjub.JavaBasic;
 
+import java.util.List;
+
 public class Game {
 
-  private final String name;
-  private final int version;
+  private final HighScoreService highScoreService;
 
-  public Game(String name, int version) {
-    this.name = name;
-    this.version = version;
+  public Game(HighScoreService highScoreService) {
+    this.highScoreService = highScoreService;
   }
 
-  @Override
-  public int hashCode() {
-    return 44;
-  }
+  public String displayHighScores() {
+    final List<String> topFivePlayers = highScoreService.getTopFivePlayers();
+    final StringBuilder sb = new StringBuilder();
 
-  @Override
-  public boolean equals(Object obj) {
-    return obj.hashCode() == this.hashCode();
+    for (int i = 0; i < topFivePlayers.size(); i++) {
+      String player = topFivePlayers.get(i);
+      sb.append(String.format("%d, %s%n", i + 1, player));
+    }
+
+    return sb.toString();
   }
 }

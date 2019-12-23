@@ -58,11 +58,11 @@ public class UseObject {
 
   @Test
   public void wrongSetBehavior() {
-    final Set<Game> people = new HashSet<>();
+    final Set<GameCD> people = new HashSet<>();
 
-    final Game game1 = new Game("Archer", 3);
-    final Game game2 = new Game("Archer", 3);
+    final GameCD gameCD1 = new GameCD("Archer", 3);
+    final GameCD gameCD2 = new GameCD("Archer", 3);
 
-    Assert.assertEquals(game1, game2);
+    Assert.assertEquals(gameCD1, gameCD2);
   }
 }
